@@ -37,8 +37,10 @@ exec --no-startup-id pulseaudio
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+# bindsym XF86MonBrightnessUp exec "sudo brightness_up"
+# bindsym XF86MonBrightnessDown exec "sudo brightness_down"
+bindsym $mod+u exec "sudo brightness_up"
+bindsym $mod+i exec "sudo brightness_down"
 
 # Start Applications
 # bindsym $mod+Ctrl+t exec --no-startup-id compton -b

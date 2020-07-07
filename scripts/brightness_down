@@ -1,0 +1,6 @@
+#!/bin/bash
+
+file="/sys/class/backlight/intel_backlight/brightness"
+value=$(cat $file)
+let value-=30
+echo $value > /sys/class/backlight/intel_backlight/brightness
