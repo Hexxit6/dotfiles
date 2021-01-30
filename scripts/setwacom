@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $1 = "primary" ]; then
+	xsetwacom set "Wacom Intuos S 2 Pad pad" MapToOutput 1920x1080+0+0
+	xsetwacom set "Wacom Intuos S 2 Pen stylus" MapToOutput 1920x1080+0+0
+elif [ $1 = "secondary" ]; then
+	xsetwacom set "Wacom Intuos S 2 Pad pad" MapToOutput 1920x1080+1920+566
+	xsetwacom set "Wacom Intuos S 2 Pen stylus" MapToOutput 1920x1080+1920+566	
+fi

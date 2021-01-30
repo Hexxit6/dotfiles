@@ -6,54 +6,79 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*background: #1e1e20
-*foreground: #c5c8c6
-*cursorColor: #c5c8c6
-*color0: #1e1e20
-*color1: #e6a57a
-*color2: #e39866
-*color3: #df8b54
-*color4: #dc7f41
-*color5: #85678f
-*color6: #b06534
-*color7: #f1cbb3
-*color8: #f4d8c6
-*color9: #e6a57a
-*color10: #e39866
-*color11: #df8b54
-*color12: #dc7f41
-*color13: #c6723a
-*color14: #b06534
-*color15: #E8E8E8
+XTerm*background:        #222D31
+XTerm*foreground:        #d8d8d8
+XTerm*pointerColor:      #1ABB9B
+XTerm*faceName:          Fixed
+XTerm*faceSize:          11
+XTerm*reverseVideo:      on
+XTerm*selectToClipboard: true
+
+*background:                      #1c1b19
+*foreground:                      #fce8c3
+*fading:                          8
+*fadeColor:                       black
+*cursorColor:                     #1ABB9B
+*pointerColorBackground:          #2B2C2B
+*pointerColorForeground:          #16A085
+
+! black
+*.color0:       #1c1b19
+*.color8:       #918175
+
+! red
+*.color1:       #ef2f27
+*.color9:       #f75341
+
+! green
+*.color2:       #00FF82
+*.color10:      #00FF82
+
+! yellow
+*.color3:       #fbb829
+*.color11:      #fed06e
+
+! blue
+*.color4:       #2c78bf
+*.color12:      #68a8e4
+
+! magenta
+*.color5:       #e02c6d
+*.color13:      #ff5c8f
+
+! cyan
+*.color6:       #0aaeb3
+*.color14:      #53fde9
+
+! white
+*.color7:       #d0bfa1
+*.color15:      #fce8c3
+
 
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
 
-! from https://www.reddit.com/r/archlinux/comments/5gntxy/urxvt_source_code_pro_font_looks_bad/
-URxvt*font: xft:Source Code Pro:size=12:antialias=true:hinting=true
-URxvt*boldFont: xft:Source Code Pro:size=12:antialias=true:hinting=true
-URxvt*italicFont: xft:Source Code Pro:style=Oblique:size=12:antialias=true:hinting=true
-URxvt*boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=12:antialias=true:hinting=true
+URxvt.font:                       xft:Source Code Pro:size=12,xft:DejaVu Sans Mono:size=12
+URxvt.letterSpace:-1
 
-! URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background:                 [100]#222D31
+URxvt.background:                 [80]#000000
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
 URxvt*background:                 black
 URxvt*foreground:                 grey
-URxvt*saveLines:                  10000
+URxvt*saveLines:                  5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-URxvt*inheritPixmap:            true
-URxvt*transparent:              true
-URxvt*shading:                  40
+! URxvt*inheritPixmap:            true
+! URxvt*transparent:              true
+! URxvt*shading:                  138
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
@@ -86,10 +111,10 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*scrollBar_align:            mode
 ! URxvt*thickness:                  number
 ! URxvt*scrollTtyOutput:            boolean
-URxvt*scrollTtyKeypress:          true
-URxvt*scrollWithBuffer:           true
+! URxvt*scrollTtyKeypress:          boolean
+! URxvt*scrollWithBuffer:           boolean
 ! URxvt*tintColor:                  !7DA55
-! URxvt*blurRadius:                 HxV
+! URxvt*blurRadius:                 Xv
 ! URxvt*fading:                     number
 ! URxvt*fadeColor:                  color
 ! URxvt*utmpInhibit:                boolean
@@ -166,12 +191,8 @@ URxvt*scrollWithBuffer:           true
 ! URxvt*secondaryScroll:            boolean
 ! URxvt*perl-lib:                   string
 ! URxvt*perl-eval:                  perl-eval
-URxvt*perl-ext:                     default,url-select
-URxvt.perl-ext-common:              default
-URxvt.url-launcher:                 /usr/bin/xdg-open
-URxvt.url-select.launcher:          /usr/bin/xdg-open
-URxvt.url-select.underline:         true
-URxvt.matcher.button:               1
+! URxvt*perl-ext-common:            string
+! URxvt*perl-ext:                   string
 ! URxvt*iso14755:                   boolean
 ! URxvt*iso14755_52:                boolean
 ! URxvt*xrm:                        string
