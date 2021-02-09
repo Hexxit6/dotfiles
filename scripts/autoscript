@@ -2,5 +2,12 @@
 
 SCRIPT_FOLDER="$HOME/scripts"
 SCRIPT_FILE="$SCRIPT_FOLDER/$1"
+
+if test -f "$SCRIPT_FILE"; then
+	echo "A script with that name already exists."
+	exit
+fi
+
 echo '#!/bin/bash' > $SCRIPT_FILE
 chmod +x $SCRIPT_FILE
+nano $SCRIPT_FILE

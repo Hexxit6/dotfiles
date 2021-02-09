@@ -1,0 +1,16 @@
+#!/bin/bash
+set -eu
+
+# SETUP:
+# sudo sln ~/scripts/anarcholock /usr/bin/anarcholock
+
+RESOLUTION=$(xrandr -q|sed -n 's/.*current[ ]\([0-9]*\) x \([0-9]*\),.*/\1x\2/p')
+OVERLAY=/usr/share/pixmaps/anarhil.png
+
+import -silent -window root png:- | \
+	convert - -scale 20% -blur 0x2.5 -resize 500% png:- | \
+	composite -gravity southeast $OVERLAY -size $RESOLUTION - rgb:- | \
+	i3lock --raw $RESOLUTION:rgb -e -i /dev/stdin
+
+#sleep 1
+exit 0
